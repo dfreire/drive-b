@@ -5,7 +5,7 @@ import (
 	"github.com/mgutz/logxi/v1"
 )
 
-func CreateAppMiddleware(jwtKey []byte, authorizedURL string) echo.HandlerFunc {
+func CreateAppMiddleware(authorizedURL string) echo.HandlerFunc {
 	return func(c *echo.Context) error {
 
 		log.Info("UserAgent", c.Request().UserAgent())
